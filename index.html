@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drt Web Designer</title>
+  <title>Drt App Developer</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(270deg, #1a1a1a, #333, #1a1a1a);
-      background-size: 600% 600%;
-      animation: gradientBG 12s ease infinite;
+      background: #0a0a0a;
       color: #eee;
+      background: linear-gradient(270deg, #0a0a0a, #1a1a1a, #0a0a0a);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
     }
 
     @keyframes gradientBG {
@@ -25,21 +26,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.7);
       backdrop-filter: blur(5px);
-      position: sticky;
-      top: 0;
     }
 
     header h1 {
-      color: #d4af37;
       font-size: 1.8rem;
+      color: #d4af37;
     }
 
     nav a {
       color: #d4af37;
-      text-decoration: none;
       margin-left: 1.2rem;
+      text-decoration: none;
       font-weight: 500;
     }
 
@@ -54,37 +53,31 @@
     }
 
     .hero h2 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #d4af37;
       margin-bottom: 1rem;
-      animation: fadeInUp 2s ease forwards;
       opacity: 0;
+      animation: fadeInUp 2s forwards;
     }
 
     .hero p {
       max-width: 600px;
       color: #ccc;
-      font-size: 1.2rem;
-      animation: fadeInUp 3s ease forwards;
+      font-size: 1.1rem;
       opacity: 0;
+      animation: fadeInUp 3s forwards;
     }
 
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .btn {
       display: inline-block;
       background: #d4af37;
       color: #000;
-      padding: 0.6rem 1.4rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 6px;
       text-decoration: none;
       margin-top: 1.5rem;
@@ -116,32 +109,32 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.2rem;
-      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
-      backdrop-filter: blur(3px);
+      border-radius: 10px;
+      padding: 1.2rem;
+      backdrop-filter: blur(4px);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(212,175,55,0.3);
+      box-shadow: 0 0 20px rgba(212,175,55,0.4);
     }
 
     footer {
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.7);
       padding: 1rem;
       text-align: center;
-      color: #888;
-      margin-top: 2rem;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Drt Web Designer</h1>
+  <h1>Drt App Developer</h1>
   <nav>
     <a href="#">Home</a>
     <a href="#">Portfolio</a>
@@ -152,25 +145,25 @@
 </header>
 
 <section class="hero">
-  <h2>Smart, Stunning & Responsive Designs</h2>
-  <p>Crafting web experiences that not only look amazing but perform flawlessly on all devices. Let your brand shine with premium design.</p>
-  <a href="#" class="btn">Let’s Talk</a>
+  <h2>We Build Smart Apps That Scale</h2>
+  <p>Modern mobile & web applications with clean code, sleek UI, and top performance. We turn your idea into reality.</p>
+  <a href="#" class="btn">Start Your Project</a>
 </section>
 
 <section class="section">
-  <h3>My Services</h3>
+  <h3>Our Expertise</h3>
   <div class="grid">
     <div class="card">
-      <h4>Custom Web Design</h4>
-      <p>Tailored designs that match your brand's unique identity and vision.</p>
+      <h4>Mobile App Development</h4>
+      <p>Custom iOS & Android apps with smooth UX and modern design.</p>
     </div>
     <div class="card">
-      <h4>UI/UX Optimization</h4>
-      <p>Ensuring seamless user experience with modern design standards.</p>
+      <h4>Web App Solutions</h4>
+      <p>Fast, scalable, secure web applications tailored to your needs.</p>
     </div>
     <div class="card">
-      <h4>E-commerce Solutions</h4>
-      <p>Complete online store setup with secure payment integration.</p>
+      <h4>UI/UX Design</h4>
+      <p>Pixel-perfect interfaces and user flows that delight users.</p>
     </div>
   </div>
 </section>
@@ -178,14 +171,35 @@
 <section class="section">
   <h3>Portfolio</h3>
   <div class="grid">
-    <div class="card">Corporate Website</div>
-    <div class="card">Creative Agency</div>
-    <div class="card">E-commerce Shop</div>
+    <div class="card">E-commerce App</div>
+    <div class="card">Social Networking App</div>
+    <div class="card">SaaS Web Platform</div>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Packages</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Starter App</h4>
+      <p>Basic MVP, clean UI, fast delivery</p>
+      <a href="#" class="btn">Choose Starter</a>
+    </div>
+    <div class="card">
+      <h4>Business App</h4>
+      <p>Multi-feature, scalable app, API integration</p>
+      <a href="#" class="btn">Choose Business</a>
+    </div>
+    <div class="card">
+      <h4>Enterprise App</h4>
+      <p>Full custom, cloud ready, priority support</p>
+      <a href="#" class="btn">Choose Enterprise</a>
+    </div>
   </div>
 </section>
 
 <footer>
-  &copy; 2025 Drt Web Designer. All rights reserved.
+  &copy; 2025 Drt App Developer. All rights reserved.
 </footer>
 
 </body>
