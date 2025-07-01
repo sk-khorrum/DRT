@@ -8,92 +8,133 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0d0d0d;
+      background: linear-gradient(270deg, #1a1a1a, #333, #1a1a1a);
+      background-size: 600% 600%;
+      animation: gradientBG 12s ease infinite;
       color: #eee;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
       padding: 1rem 2rem;
-      background: #111;
-      color: #d4af37;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
     }
 
     header h1 {
+      color: #d4af37;
       font-size: 1.8rem;
     }
 
     nav a {
       color: #d4af37;
-      margin-left: 1.5rem;
       text-decoration: none;
+      margin-left: 1.2rem;
       font-weight: 500;
     }
 
     .hero {
-      background: radial-gradient(circle at center, #222, #000);
-      padding: 6rem 2rem;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 2rem;
     }
 
     .hero h2 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       color: #d4af37;
+      margin-bottom: 1rem;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
     }
 
     .hero p {
       max-width: 600px;
-      margin: 1rem auto;
       color: #ccc;
+      font-size: 1.2rem;
+      animation: fadeInUp 3s ease forwards;
+      opacity: 0;
     }
 
-    .section {
-      padding: 3rem 2rem;
-    }
-
-    .section h3 {
-      text-align: center;
-      color: #d4af37;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #1a1a1a;
-      padding: 1.2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
-    }
-
-    .card:hover {
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 1rem;
-      color: #777;
-      font-size: 0.9rem;
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .btn {
       display: inline-block;
       background: #d4af37;
-      color: #0d0d0d;
-      padding: 0.5rem 1rem;
+      color: #000;
+      padding: 0.6rem 1.4rem;
       border-radius: 6px;
       text-decoration: none;
-      margin-top: 1rem;
-      font-weight: 600;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #bfa133;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h3 {
+      text-align: center;
+      color: #d4af37;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(3px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(212,175,55,0.3);
+    }
+
+    footer {
+      background: rgba(0,0,0,0.5);
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -111,9 +152,9 @@
 </header>
 
 <section class="hero">
-  <h2>Designing Smart & Stunning Websites</h2>
-  <p>Modern, lightweight, fast-loading web solutions tailored for your business.</p>
-  <a href="#" class="btn">Get a Free Quote</a>
+  <h2>Smart, Stunning & Responsive Designs</h2>
+  <p>Crafting web experiences that not only look amazing but perform flawlessly on all devices. Let your brand shine with premium design.</p>
+  <a href="#" class="btn">Let’s Talk</a>
 </section>
 
 <section class="section">
@@ -121,15 +162,15 @@
   <div class="grid">
     <div class="card">
       <h4>Custom Web Design</h4>
-      <p>Unique, user-centric designs that reflect your brand identity.</p>
+      <p>Tailored designs that match your brand's unique identity and vision.</p>
     </div>
     <div class="card">
-      <h4>UI/UX Development</h4>
-      <p>Modern interfaces and seamless user experience on all devices.</p>
+      <h4>UI/UX Optimization</h4>
+      <p>Ensuring seamless user experience with modern design standards.</p>
     </div>
     <div class="card">
-      <h4>E-commerce</h4>
-      <p>Online store setup with secure payment gateway integration.</p>
+      <h4>E-commerce Solutions</h4>
+      <p>Complete online store setup with secure payment integration.</p>
     </div>
   </div>
 </section>
@@ -137,65 +178,9 @@
 <section class="section">
   <h3>Portfolio</h3>
   <div class="grid">
-    <div class="card">
-      <p>Project 1 - Corporate site</p>
-    </div>
-    <div class="card">
-      <p>Project 2 - Creative Agency</p>
-    </div>
-    <div class="card">
-      <p>Project 3 - Online Shop</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h3>Testimonials</h3>
-  <div class="grid">
-    <div class="card">
-      <p>"Amazing design sense and attention to detail!"</p>
-      <small>- Client A</small>
-    </div>
-    <div class="card">
-      <p>"Delivered exactly what we needed, on time."</p>
-      <small>- Client B</small>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h3>Work Process</h3>
-  <div class="grid">
-    <div class="card">
-      <p>1️⃣ Discuss & Plan</p>
-    </div>
-    <div class="card">
-      <p>2️⃣ Design Mockup</p>
-    </div>
-    <div class="card">
-      <p>3️⃣ Build & Deliver</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h3>Packages</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Starter</h4>
-      <p>1-page site, responsive, fast delivery.</p>
-      <a href="#" class="btn">Choose Starter</a>
-    </div>
-    <div class="card">
-      <h4>Pro</h4>
-      <p>Multi-page, UI/UX optimized, SEO ready.</p>
-      <a href="#" class="btn">Choose Pro</a>
-    </div>
-    <div class="card">
-      <h4>Gold</h4>
-      <p>Full custom, animations, CMS, support.</p>
-      <a href="#" class="btn">Choose Gold</a>
-    </div>
+    <div class="card">Corporate Website</div>
+    <div class="card">Creative Agency</div>
+    <div class="card">E-commerce Shop</div>
   </div>
 </section>
 
